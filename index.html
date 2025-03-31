@@ -13,14 +13,190 @@
     <main>
         <div class="top">
             <div id="crypto">
-                <div id="crypto-top"></div>
+                <div id="crypto-top">
+                    <!-- Cryptocurrency icon and name will be inserted here -->
+                </div>
+                <!-- Price info paragraphs will be inserted here -->
+                <div id="crypto-selector">
+                    <div class="search-crypto-container">
+                        <div class="crypto-search-wrapper">
+                            <input type="text" id="crypto-search" placeholder="Search cryptocurrency..." autocomplete="off">
+                            <div class="crypto-search-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="crypto-dropdown-content" id="crypto-dropdown"></div>
+                        <div class="crypto-not-found" id="crypto-not-found">No matching cryptocurrencies found.</div>
+                    </div>
+                </div>
+                <div id="crypto-chart" class="crypto-chart">
+                    <!-- Chart will be rendered here -->
+                </div>
             </div>
-            <div id="weather"></div>
+            <div class="weather-time-container">
+                <div id="weather">
+                    <!-- Weather content will be populated here -->
+                </div>
+                <div class="datetime-container">
+                    <h1 id="time" class="time">TIME HERE</h1>
+                    <p id="date" class="date">
+                        <span class="weekday">DAY</span>
+                        <span class="date-numbers">DATE HERE</span>
+                    </p>
+                </div>
+            </div>
         </div>
-        <h1 id="time" class="time">TIME HERE</h1>
-        <p id="author"></p>
+        
+        <div class="search-container">
+            <form id="search-form" action="https://www.google.com/search" method="get" target="_blank">
+                <div class="search-engine-selector">
+                    <div class="current-engine" id="current-engine">
+                        <img src="https://www.google.com/favicon.ico" alt="Google" id="engine-icon">
+                        <span class="engine-text">Google</span>
+                        <span class="engine-arrow">▼</span>
+                    </div>
+                    <div class="search-engines-dropdown" id="search-engines-dropdown">
+                        <div class="search-engine-option" data-engine="google" data-url="https://www.google.com/search">
+                            <img src="https://www.google.com/favicon.ico" alt="Google">
+                            <span>Google</span>
+                        </div>
+                        <div class="search-engine-option" data-engine="bing" data-url="https://www.bing.com/search">
+                            <img src="https://www.bing.com/favicon.ico" alt="Bing">
+                            <span>Bing</span>
+                        </div>
+                        <div class="search-engine-option" data-engine="yahoo" data-url="https://search.yahoo.com/search">
+                            <img src="https://www.yahoo.com/favicon.ico" alt="Yahoo">
+                            <span>Yahoo</span>
+                        </div>
+                        <div class="search-engine-option" data-engine="duckduckgo" data-url="https://duckduckgo.com/">
+                            <img src="https://duckduckgo.com/favicon.ico" alt="DuckDuckGo">
+                            <span>DuckDuckGo</span>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" id="search-input" name="q" placeholder="Search the web...">
+                <button type="submit" id="search-button">Search</button>
+            </form>
+            
+            <div class="bookmarks-container">
+                <div class="bookmark-item" data-url="" data-name="">
+                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-name">Quick Access</div>
+                </div>
+                <div class="bookmark-item" data-url="" data-name="">
+                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-name">Quick Access</div>
+                </div>
+                <div class="bookmark-item" data-url="" data-name="">
+                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-name">Quick Access</div>
+                </div>
+                <div class="bookmark-item" data-url="" data-name="">
+                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-name">Quick Access</div>
+                </div>
+                <div class="bookmark-item" data-url="" data-name="">
+                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-name">Quick Access</div>
+                </div>
+                <div class="bookmark-item" data-url="" data-name="">
+                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-name">Quick Access</div>
+                </div>
+                <div class="bookmark-item" data-url="" data-name="">
+                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-name">Quick Access</div>
+                </div>
+                <div class="bookmark-item" data-url="" data-name="">
+                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-name">Quick Access</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-container">
+            <p id="author"></p>
+            <div class="buttons-container">
+                <button id="settings-button" class="icon-button" title="Dashboard Settings">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="tooltip">Settings</span>
+                </button>
+                <button id="next-image" class="icon-button" title="Change Background Image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="tooltip">New Background</span>
+                </button>
+            </div>
+        </div>
     </main>
-    <script type="text/javascript" src="index.mjs"></script>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Dashboard Settings</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <h3>Time & Date Format</h3>
+                    <div class="setting-option">
+                        <label for="time-format">Time Format:</label>
+                        <select id="time-format">
+                            <option value="12-hour">12-hour</option>
+                            <option value="24-hour">24-hour</option>
+                        </select>
+                    </div>
+                    <div class="setting-option">
+                        <label for="date-format">Date Format:</label>
+                        <select id="date-format">
+                            <option value="dd/mm/yy">DD/MM/YY</option>
+                            <option value="mm/dd/yy">MM/DD/YY</option>
+                            <option value="yy/mm/dd">YY/MM/DD</option>
+                            <option value="yyyy/mm/dd">YYYY/MM/DD</option>
+                            <option value="yyyymmdd">YYYYMMDD</option>
+                            <option value="yyyy-mm-dd">YYYY-MM-DD</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <h3>Weather</h3>
+                    <div class="setting-option">
+                        <label for="use-location">Use Current Location:</label>
+                        <input type="checkbox" id="use-location" checked>
+                    </div>
+                    <div class="setting-option location-input" id="manual-location-container">
+                        <label for="city-input">City Name:</label>
+                        <input type="text" id="city-input" placeholder="Enter city name">
+                        <button id="apply-location">Apply</button>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <h3>Bookmarks</h3>
+                    <div class="setting-option">
+                        <label>Import Bookmarks from Browser:</label>
+                        <button id="import-bookmarks" class="settings-button">Import</button>
+                    </div>
+                    <div class="setting-option">
+                        <label>Clear All Bookmarks:</label>
+                        <button id="clear-bookmarks" class="settings-button">Clear</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="save-settings" class="settings-button save">Save Settings</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/index.js"></script>
 </body>
 
 </html>
