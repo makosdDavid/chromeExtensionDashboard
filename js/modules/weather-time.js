@@ -36,35 +36,13 @@ function getCurrentTime() {
     // Get day of week
     const weekday = date.toLocaleDateString("en-us", { weekday: 'long' });
     
-    // Get settings for date format
-    const dateFormat = localStorage.getItem("dateFormat") || "dd/mm/yy";
-    
-    // Update date based on selected format
+    // Format date as YYYY-MM-DD (hardcoded format)
     const day = String(date.getDate()).padStart(2, '0');
     const month = String(date.getMonth() + 1).padStart(2, '0');
-    const shortYear = String(date.getFullYear()).slice(-2);
     const fullYear = String(date.getFullYear());
     
-    let formattedDate;
-    switch(dateFormat) {
-        case "mm/dd/yy":
-            formattedDate = `${month}/${day}/${shortYear}`;
-            break;
-        case "yy/mm/dd":
-            formattedDate = `${shortYear}/${month}/${day}`;
-            break;
-        case "yyyy/mm/dd":
-            formattedDate = `${fullYear}/${month}/${day}`;
-            break;
-        case "yyyymmdd":
-            formattedDate = `${fullYear}${month}${day}`;
-            break;
-        case "yyyy-mm-dd":
-            formattedDate = `${fullYear}-${month}-${day}`;
-            break;
-        default: // dd/mm/yy
-            formattedDate = `${day}/${month}/${shortYear}`;
-    }
+    // Always use YYYY-MM-DD format
+    const formattedDate = `${fullYear}-${month}-${day}`;
     
     // If we have a weather widget, update time and date inside it
     const timeEl = document.getElementById("time");

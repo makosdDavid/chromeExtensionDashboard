@@ -17,7 +17,6 @@ export function initSettings() {
     const cityInput = document.getElementById("city-input");
     const applyLocationBtn = document.getElementById("apply-location");
     const timeFormatSelect = document.getElementById("time-format");
-    const dateFormatSelect = document.getElementById("date-format");
     const importBookmarksBtn = document.getElementById("import-bookmarks");
     const clearBookmarksBtn = document.getElementById("clear-bookmarks");
     
@@ -61,9 +60,8 @@ export function initSettings() {
     
     // Save settings
     saveBtn.addEventListener("click", function() {
-        // Save time and date format settings
+        // Save time format setting
         localStorage.setItem("timeFormat", timeFormatSelect.value);
-        localStorage.setItem("dateFormat", dateFormatSelect.value);
         
         // Save location settings
         localStorage.setItem("useCurrentLocation", useLocationCheckbox.checked);
@@ -122,16 +120,13 @@ export function initSettings() {
 // Load current settings into form
 function loadCurrentSettings() {
     const timeFormatSelect = document.getElementById("time-format");
-    const dateFormatSelect = document.getElementById("date-format");
     const useLocationCheckbox = document.getElementById("use-location");
     const manualLocationContainer = document.getElementById("manual-location-container");
     const cityInput = document.getElementById("city-input");
     
-    // Load time and date format settings
+    // Load time format setting
     const timeFormat = localStorage.getItem("timeFormat") || "12-hour";
-    const dateFormat = localStorage.getItem("dateFormat") || "dd/mm/yy";
     timeFormatSelect.value = timeFormat;
-    dateFormatSelect.value = dateFormat;
     
     // Load location settings
     const useCurrentLocation = localStorage.getItem("useCurrentLocation") !== "false";

@@ -5,16 +5,10 @@
 
 // Initialize search and bookmarks
 export function initSearchBookmarks() {
-    // Initialize search engine functionality
     initSearchEngine();
-    
-    // Initialize search suggestions
     initSearchSuggestions();
-    
-    // Initialize bookmarks
     initBookmarks();
     
-    // Add keyboard shortcut for search
     document.addEventListener("keydown", function(e) {
         if (e.ctrlKey && e.code === "Space") {
             e.preventDefault();

@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: rgba(120, 120, 120, 0.4) transparent; /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(120, 120, 120, 0.4) transparent;
 }
 
 body {
@@ -32,7 +32,7 @@ div.top {
 h1.time {
     text-align: center;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     line-height: 1;
 }
 
@@ -72,14 +72,14 @@ div#crypto-top img {
 
 #crypto-selector {
     margin-top: 10px;
-    display: block !important; /* Force display */
+    display: block !important;
 }
 
 .search-crypto-container {
     position: relative;
     width: 100%;
-    margin-bottom: 10px; /* Add space between search and chart */
-    display: block !important; /* Force display */
+    margin-bottom: 10px;
+    display: block !important;
 }
 
 .crypto-search-wrapper {
@@ -99,7 +99,7 @@ div#crypto-top img {
     color: white;
     font-size: 14px;
     text-shadow: none;
-    display: block !important; /* Force display */
+    display: block !important;
 }
 
 #crypto-search:focus {
@@ -202,7 +202,6 @@ div#crypto-top img {
     z-index: 1000;
 }
 
-/* Hide all scrollbars but maintain functionality */
 *::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -217,7 +216,6 @@ div#crypto-top img {
     border-radius: 10px;
 }
 
-/* Option to completely hide scrollbars */
 .hide-scrollbar {
     scrollbar-width: none;
 }
@@ -332,13 +330,6 @@ div#crypto-top img {
     padding-top: 10px;
 }
 
-h1.time {
-    text-align: center;
-    margin: 0;
-    font-size: 1.8rem;
-    line-height: 1;
-}
-
 p.date {
     margin: 2px 0 0 0;
     font-size: 0.9rem;
@@ -392,7 +383,6 @@ p.weather-city {
     font-size: 18px;
 }
 
-/* Weather Forecast Styles */
 .weather-forecast {
     width: 100%;
     margin-top: 10px;
@@ -428,7 +418,6 @@ p.weather-city {
     font-size: 14px;
 }
 
-/* Media queries for responsive forecast */
 @media (max-width: 520px) {
     .forecast-day-abbrev {
         font-size: 12px;
@@ -441,7 +430,6 @@ p.weather-city {
     }
 }
 
-/* Search Container Styles */
 .search-container {
     width: 80%;
     max-width: 800px;
@@ -464,7 +452,6 @@ p.weather-city {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Search Engine Selector */
 .search-engine-selector {
     position: relative;
     z-index: 1002;
@@ -557,7 +544,6 @@ p.weather-city {
     color: white;
 }
 
-/* Search Suggestions Dropdown */
 .search-suggestions {
     display: none;
     position: absolute;
@@ -572,11 +558,6 @@ p.weather-city {
     overflow: hidden;
     animation: fadeIn 0.2s ease-out;
     backdrop-filter: blur(5px);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 
 .suggestion-item {
@@ -601,7 +582,6 @@ p.weather-city {
     font-weight: normal;
 }
 
-/* Search input styling */
 #search-input {
     flex-grow: 1;
     padding: 12px 20px;
@@ -619,7 +599,6 @@ p.weather-city {
     outline: none;
 }
 
-/* Search button */
 #search-button {
     padding: 12px 25px;
     background: rgba(80, 80, 80, 0.7);
@@ -634,7 +613,6 @@ p.weather-city {
     background: rgba(100, 100, 100, 0.9);
 }
 
-/* Bookmarks Container Styles */
 .bookmarks-container {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -683,7 +661,6 @@ p.weather-city {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* Bottom container with author and buttons */
 .bottom-container {
     display: flex;
     justify-content: space-between;
@@ -716,7 +693,7 @@ p.weather-city {
     cursor: pointer;
     transition: all 0.3s ease;
     backdrop-filter: blur(5px);
-    position: relative; /* For tooltip positioning */
+    position: relative;
 }
 
 .icon-button:hover {
@@ -725,7 +702,6 @@ p.weather-city {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Tooltip styling */
 .icon-button .tooltip {
     visibility: hidden;
     background-color: rgba(0, 0, 0, 0.8);
@@ -745,13 +721,11 @@ p.weather-city {
     pointer-events: none;
 }
 
-/* Show tooltip on hover */
 .icon-button:hover .tooltip {
     visibility: visible;
     opacity: 1;
 }
 
-/* Triangle pointer for tooltip */
 .icon-button .tooltip::after {
     content: "";
     position: absolute;
@@ -763,26 +737,6 @@ p.weather-city {
     border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
 }
 
-.next-image-btn {
-    display: none; /* Hide since we're now using icon buttons */
-    background: rgba(64, 64, 64, 0.6);
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
-}
-
-.next-image-btn:hover {
-    background: rgba(80, 80, 80, 0.8);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Settings Modal */
 .modal {
     display: none;
     position: fixed;
@@ -933,7 +887,6 @@ p.weather-city {
     background: rgba(0, 122, 255, 0.9);
 }
 
-/* Add new styles for the settings dropdowns */
 .setting-option select {
     background-color: rgba(60, 60, 60, 0.9);
     color: white;

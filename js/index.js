@@ -14,21 +14,13 @@ import { initNews } from './modules/news.js';
 
 // Initialize the application
 function initApp() {
-    console.log('Initializing Chrome Extension Dashboard...');
-    
-    // Initialize core modules
     initBackground();
     initCrypto();
     initWeatherTime();
     initSearchBookmarks();
     initSettings();
-    
-    // Initialize placeholder modules for future features
-    // These don't add functionality yet but prepare for future expansion
     initNotes();
     initNews();
-    
-    console.log('Dashboard initialization complete!');
 }
 
 // Start the application when the DOM is fully loaded
