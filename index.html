@@ -40,13 +40,6 @@
                 <div id="weather">
                     <!-- Weather content will be populated here -->
                 </div>
-                <div class="datetime-container">
-                    <h1 id="time" class="time">TIME HERE</h1>
-                    <p id="date" class="date">
-                        <span class="weekday">DAY</span>
-                        <span class="date-numbers">DATE HERE</span>
-                    </p>
-                </div>
             </div>
         </div>
         
@@ -56,7 +49,7 @@
                     <div class="current-engine" id="current-engine">
                         <img src="https://www.google.com/favicon.ico" alt="Google" id="engine-icon">
                         <span class="engine-text">Google</span>
-                        <span class="engine-arrow">▼</span>
+                   
                     </div>
                     <div class="search-engines-dropdown" id="search-engines-dropdown">
                         <div class="search-engine-option" data-engine="google" data-url="https://www.google.com/search">
@@ -75,6 +68,26 @@
                             <img src="https://duckduckgo.com/favicon.ico" alt="DuckDuckGo">
                             <span>DuckDuckGo</span>
                         </div>
+                        <div class="search-engine-option" data-engine="brave" data-url="https://search.brave.com/search">
+                            <img src="https://search.brave.com/favicon.ico" alt="Brave">
+                            <span>Brave</span>
+                        </div>
+                        <div class="search-engine-option" data-engine="ecosia" data-url="https://www.ecosia.org/search">
+                            <img src="https://www.ecosia.org/favicon.ico" alt="Ecosia">
+                            <span>Ecosia</span>
+                        </div>
+                        <div class="search-engine-option" data-engine="startpage" data-url="https://www.startpage.com/do/search">
+                            <img src="https://www.startpage.com/favicon.ico" alt="Startpage">
+                            <span>Startpage</span>
+                        </div>
+                        <div class="search-engine-option" data-engine="qwant" data-url="https://www.qwant.com/">
+                            <img src="https://www.qwant.com/favicon.ico" alt="Qwant">
+                            <span>Qwant</span>
+                        </div>
+                        <div class="search-engine-option" data-engine="yandex" data-url="https://yandex.com/search/">
+                            <img src="https://yandex.com/favicon.ico" alt="Yandex">
+                            <span>Yandex</span>
+                        </div>
                     </div>
                 </div>
                 <input type="text" id="search-input" name="q" placeholder="Search the web...">
@@ -83,35 +96,35 @@
             
             <div class="bookmarks-container">
                 <div class="bookmark-item" data-url="" data-name="">
-                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-icon">+</div>
                     <div class="bookmark-name">Quick Access</div>
                 </div>
                 <div class="bookmark-item" data-url="" data-name="">
-                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-icon">+</div>
                     <div class="bookmark-name">Quick Access</div>
                 </div>
                 <div class="bookmark-item" data-url="" data-name="">
-                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-icon">+</div>
                     <div class="bookmark-name">Quick Access</div>
                 </div>
                 <div class="bookmark-item" data-url="" data-name="">
-                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-icon">+</div>
                     <div class="bookmark-name">Quick Access</div>
                 </div>
                 <div class="bookmark-item" data-url="" data-name="">
-                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-icon">+</div>
                     <div class="bookmark-name">Quick Access</div>
                 </div>
                 <div class="bookmark-item" data-url="" data-name="">
-                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-icon">+</div>
                     <div class="bookmark-name">Quick Access</div>
                 </div>
                 <div class="bookmark-item" data-url="" data-name="">
-                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-icon">+</div>
                     <div class="bookmark-name">Quick Access</div>
                 </div>
                 <div class="bookmark-item" data-url="" data-name="">
-                    <div class="bookmark-icon">➕</div>
+                    <div class="bookmark-icon">+</div>
                     <div class="bookmark-name">Quick Access</div>
                 </div>
             </div>
@@ -155,12 +168,7 @@
                     </div>
                     <div class="setting-option">
                         <label for="date-format">Date Format:</label>
-                        <select id="date-format">
-                            <option value="dd/mm/yy">DD/MM/YY</option>
-                            <option value="mm/dd/yy">MM/DD/YY</option>
-                            <option value="yy/mm/dd">YY/MM/DD</option>
-                            <option value="yyyy/mm/dd">YYYY/MM/DD</option>
-                            <option value="yyyymmdd">YYYYMMDD</option>
+                        <select id="date-format">    
                             <option value="yyyy-mm-dd">YYYY-MM-DD</option>
                         </select>
                     </div>

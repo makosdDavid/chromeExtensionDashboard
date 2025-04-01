@@ -57,6 +57,36 @@ function initSearchEngine() {
             icon: "https://duckduckgo.com/favicon.ico",
             name: "DuckDuckGo",
             paramName: "q"
+        },
+        brave: {
+            url: "https://search.brave.com/search",
+            icon: "https://search.brave.com/favicon.ico",
+            name: "Brave",
+            paramName: "q"
+        },
+        ecosia: {
+            url: "https://www.ecosia.org/search",
+            icon: "https://www.ecosia.org/favicon.ico",
+            name: "Ecosia",
+            paramName: "q"
+        },
+        startpage: {
+            url: "https://www.startpage.com/do/search",
+            icon: "https://www.startpage.com/favicon.ico",
+            name: "Startpage",
+            paramName: "q"
+        },
+        qwant: {
+            url: "https://www.qwant.com/",
+            icon: "https://www.qwant.com/favicon.ico",
+            name: "Qwant",
+            paramName: "q"
+        },
+        yandex: {
+            url: "https://yandex.com/search/",
+            icon: "https://yandex.com/favicon.ico",
+            name: "Yandex",
+            paramName: "text"
         }
     };
     
